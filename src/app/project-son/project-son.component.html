@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div class="card card-small">
+    <li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': status === 'realise',
+                'list-group-item-danger': status === 'encore'}">
+      <div style="width:20px;height:20px;background-color:red;"
+           *ngIf="status === 'encore'"></div>
+      <h4 [ngStyle]="{color:getColor()}"> Look my dream:{{reve}}</h4>
+      <input type="text" class="form-control" [(ngModel)]="status">
+    </li>
+  </div>
+</div>
+
